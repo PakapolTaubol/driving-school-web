@@ -8,10 +8,12 @@ import {
   MapPin,
   Phone,
   Mail,
+  MessageCircle,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import TestimonialCard from "@/components/testimonial-card";
 import CourseCard from "@/components/course-card";
+import { CONTACT_INFO } from "@/lib/constants";
 
 export default function Home() {
   return (
@@ -23,10 +25,10 @@ export default function Home() {
             <div className="flex flex-col justify-center space-y-4">
               <div className="space-y-2">
                 <h1 className="text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none">
-                  สอนขับรถประชาอุทิศ
+                  สอนขับรถ by ครูเอ้
                 </h1>
                 <p className="max-w-[600px] text-gray-500 md:text-xl dark:text-gray-400">
-                  ประชาอุทิศ สอนขับรถสุขสวัสดิ์ บ้านคลองสวน ครุใน by ครูเอ้
+                  ประชาอุทิศ สุขสวัสดิ์ บ้านคลองสวน ครุใน
                 </p>
               </div>
               <div className="flex flex-col gap-2 min-[400px]:flex-row">
@@ -211,20 +213,18 @@ export default function Home() {
               </div>
               <h3 className="text-xl font-bold">โทรศัพท์</h3>
               <p className="text-gray-500 dark:text-gray-400">
-                02-123-4567
-                <br />
-                081-234-5678
+                {CONTACT_INFO.phone.phone1}
+                {/* <br />
+                {CONTACT_INFO.phone.phone2} */}
               </p>
             </div>
             <div className="flex flex-col items-center space-y-4 text-center">
               <div className="flex h-20 w-20 items-center justify-center rounded-full bg-blue-100">
-                <Mail className="h-10 w-10 text-blue-600" />
+                <MessageCircle className="h-10 w-10 text-green-600" />
               </div>
-              <h3 className="text-xl font-bold">อีเมล</h3>
+              <h3 className="text-xl font-bold">Line ID</h3>
               <p className="text-gray-500 dark:text-gray-400">
-                info@drivingschool.com
-                <br />
-                contact@drivingschool.com
+                {CONTACT_INFO.phone.phone1}
               </p>
             </div>
             <div className="flex flex-col items-center space-y-4 text-center">
@@ -233,11 +233,11 @@ export default function Home() {
               </div>
               <h3 className="text-xl font-bold">ที่อยู่</h3>
               <p className="text-gray-500 dark:text-gray-400">
-                123 ถนนประชาอุทิศ
+                {CONTACT_INFO.address.line1}
                 <br />
-                แขวงทุ่งครุ เขตทุ่งครุ
+                {CONTACT_INFO.address.line2}
                 <br />
-                กรุงเทพฯ 10140
+                {CONTACT_INFO.address.line3}
               </p>
             </div>
           </div>

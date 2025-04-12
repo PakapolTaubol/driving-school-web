@@ -1,9 +1,10 @@
-import Link from "next/link"
-import { MapPin, Phone, Mail, Facebook, MessageCircle } from "lucide-react"
-import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
-import { Textarea } from "@/components/ui/textarea"
-import { Label } from "@/components/ui/label"
+import Link from "next/link";
+import { MapPin, Phone, Mail, Facebook, MessageCircle } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { Label } from "@/components/ui/label";
+import { CONTACT_INFO } from "@/lib/constants";
 
 export default function ContactPage() {
   return (
@@ -13,7 +14,9 @@ export default function ContactPage() {
         <div className="px-4 md:px-6">
           <div className="flex flex-col items-center justify-center space-y-4 text-center">
             <div className="space-y-2">
-              <h1 className="text-3xl font-bold tracking-tighter sm:text-5xl">ติดต่อเรา</h1>
+              <h1 className="text-3xl font-bold tracking-tighter sm:text-5xl">
+                ติดต่อเรา
+              </h1>
               <p className="max-w-[900px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
                 มีคำถามหรือต้องการข้อมูลเพิ่มเติม ติดต่อเราได้ตามช่องทางด้านล่าง
               </p>
@@ -31,37 +34,35 @@ export default function ContactPage() {
                 <h2 className="text-2xl font-bold mb-4">ข้อมูลติดต่อ</h2>
                 <div className="grid gap-4">
                   <div className="flex items-start gap-4">
-                    <MapPin className="h-5 w-5 text-blue-600 mt-0.5" />
-                    <div>
-                      <h3 className="font-bold">ที่อยู่</h3>
-                      <p className="text-sm text-muted-foreground">
-                        123 ถนนประชาอุทิศ
-                        <br />
-                        แขวงทุ่งครุ เขตทุ่งครุ
-                        <br />
-                        กรุงเทพฯ 10140
-                      </p>
-                    </div>
-                  </div>
-                  <div className="flex items-start gap-4">
                     <Phone className="h-5 w-5 text-blue-600 mt-0.5" />
                     <div>
                       <h3 className="font-bold">โทรศัพท์</h3>
                       <p className="text-sm text-muted-foreground">
-                        02-123-4567
-                        <br />
-                        081-234-5678
+                        {CONTACT_INFO.phone.phone1}
+                        {/* <br />
+                        081-234-5678 */}
                       </p>
                     </div>
                   </div>
                   <div className="flex items-start gap-4">
-                    <Mail className="h-5 w-5 text-blue-600 mt-0.5" />
+                    <MessageCircle className="h-5 w-5 text-green-600 mt-0.5" />
                     <div>
-                      <h3 className="font-bold">อีเมล</h3>
+                      <h3 className="font-bold">Line ID</h3>
                       <p className="text-sm text-muted-foreground">
-                        info@drivingschool.com
+                        {CONTACT_INFO.phone.phone1}
+                      </p>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-4">
+                    <MapPin className="h-5 w-5 text-blue-600 mt-0.5" />
+                    <div>
+                      <h3 className="font-bold">ที่อยู่</h3>
+                      <p className="text-sm text-muted-foreground">
+                        {CONTACT_INFO.address.line1}
                         <br />
-                        contact@drivingschool.com
+                        {CONTACT_INFO.address.line2}
+                        <br />
+                        {CONTACT_INFO.address.line3}
                       </p>
                     </div>
                   </div>
@@ -71,7 +72,7 @@ export default function ContactPage() {
                 <h2 className="text-2xl font-bold mb-4">ติดตามเรา</h2>
                 <div className="flex gap-4">
                   <Link
-                    href="https://facebook.com"
+                    href={CONTACT_INFO.social.facebook}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center gap-2 rounded-lg border bg-card p-4 text-card-foreground shadow hover:bg-blue-50"
@@ -80,7 +81,7 @@ export default function ContactPage() {
                     <span>Facebook</span>
                   </Link>
                   <Link
-                    href="https://line.me"
+                    href={CONTACT_INFO.social.line}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center gap-2 rounded-lg border bg-card p-4 text-card-foreground shadow hover:bg-green-50"
@@ -129,9 +130,15 @@ export default function ContactPage() {
                 </div>
                 <div className="grid gap-2">
                   <Label htmlFor="message">ข้อความ</Label>
-                  <Textarea id="message" placeholder="กรุณากรอกข้อความ" className="min-h-[150px]" />
+                  <Textarea
+                    id="message"
+                    placeholder="กรุณากรอกข้อความ"
+                    className="min-h-[150px]"
+                  />
                 </div>
-                <Button className="bg-blue-600 hover:bg-blue-700">ส่งข้อความ</Button>
+                <Button className="bg-blue-600 hover:bg-blue-700">
+                  ส่งข้อความ
+                </Button>
               </form>
             </div>
           </div>
@@ -143,7 +150,9 @@ export default function ContactPage() {
         <div className="px-4 md:px-6">
           <div className="flex flex-col items-center justify-center space-y-4 text-center">
             <div className="space-y-2">
-              <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">แผนที่</h2>
+              <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
+                แผนที่
+              </h2>
               <p className="max-w-[900px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
                 ตำแหน่งที่ตั้งของโรงเรียนสอนขับรถประชาอุทิศ
               </p>
@@ -172,19 +181,24 @@ export default function ContactPage() {
         <div className="px-4 md:px-6">
           <div className="flex flex-col items-center justify-center space-y-4 text-center">
             <div className="space-y-2">
-              <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">พร้อมเริ่มเรียนขับรถกับเราหรือยัง?</h2>
+              <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
+                พร้อมเริ่มเรียนขับรถกับเราหรือยัง?
+              </h2>
               <p className="max-w-[900px] md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                ลงทะเบียนเรียนวันนี้ และเริ่มต้นการเดินทางสู่การเป็นผู้ขับขี่ที่มั่นใจและปลอดภัย
+                ลงทะเบียนเรียนวันนี้
+                และเริ่มต้นการเดินทางสู่การเป็นผู้ขับขี่ที่มั่นใจและปลอดภัย
               </p>
             </div>
             <div className="flex flex-col gap-2 min-[400px]:flex-row">
               <Link href="/courses">
-                <Button className="bg-white text-blue-600 hover:bg-gray-100">ลงทะเบียนเรียน</Button>
+                <Button className="bg-white text-blue-600 hover:bg-gray-100">
+                  ลงทะเบียนเรียน
+                </Button>
               </Link>
             </div>
           </div>
         </div>
       </section>
     </div>
-  )
+  );
 }
