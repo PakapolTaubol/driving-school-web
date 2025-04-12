@@ -16,7 +16,7 @@ export default function CourseCard({ title, description, hours, price, image }: 
     <div className="flex flex-col overflow-hidden rounded-lg border bg-card text-card-foreground shadow">
       <div className="relative h-48 w-full">
         <Image
-          src={image || "/placeholder.svg?height=200&width=300&bgcolor=%23e5e5e5"}
+          src={image || "/image/just-grey.png"}
           alt={title}
           fill
           className="object-cover"

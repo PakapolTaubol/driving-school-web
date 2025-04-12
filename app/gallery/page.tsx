@@ -1,4 +1,4 @@
-import Image from "next/image"
+import Image from "next/image";
 
 export default function GalleryPage() {
   return (
@@ -8,7 +8,9 @@ export default function GalleryPage() {
         <div className="px-4 md:px-6">
           <div className="flex flex-col items-center justify-center space-y-4 text-center">
             <div className="space-y-2">
-              <h1 className="text-3xl font-bold tracking-tighter sm:text-5xl">แกลเลอรี่</h1>
+              <h1 className="text-3xl font-bold tracking-tighter sm:text-5xl">
+                แกลเลอรี่
+              </h1>
               <p className="max-w-[900px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
                 ภาพบรรยากาศการเรียนและความประทับใจจากผู้เรียน
               </p>
@@ -20,11 +22,11 @@ export default function GalleryPage() {
       {/* Gallery Section */}
       <section className="w-full py-12 md:py-24 lg:py-32">
         <div className="px-4 md:px-6">
-          <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
-            {Array.from({ length: 12 }).map((_, i) => (
+          <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3">
+            {Array.from({ length: 15 }).map((_, i) => (
               <div key={i} className="overflow-hidden rounded-lg">
                 <Image
-                  src={`/placeholder.svg?height=300&width=400&text=Gallery+Image+${i + 1}&bgcolor=%23e5e5e5`}
+                  src="/image/just-grey.png"
                   alt={`Gallery image ${i + 1}`}
                   width={400}
                   height={300}
@@ -41,7 +43,9 @@ export default function GalleryPage() {
         <div className="px-4 md:px-6">
           <div className="flex flex-col items-center justify-center space-y-4 text-center">
             <div className="space-y-2">
-              <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">เสียงจากผู้เรียน</h2>
+              <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
+                เสียงจากผู้เรียน
+              </h2>
               <p className="max-w-[900px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
                 ความประทับใจจากผู้ที่เรียนกับเรา
               </p>
@@ -49,11 +53,14 @@ export default function GalleryPage() {
           </div>
           <div className="mx-auto grid max-w-5xl gap-6 py-12 md:grid-cols-2 lg:grid-cols-3">
             {testimonials.map((testimonial, i) => (
-              <div key={i} className="flex flex-col gap-4 rounded-lg border bg-card p-6 text-card-foreground shadow">
+              <div
+                key={i}
+                className="flex flex-col gap-4 rounded-lg border bg-card p-6 text-card-foreground shadow"
+              >
                 <div className="flex items-center gap-4">
                   <div className="relative h-12 w-12 overflow-hidden rounded-full">
                     <Image
-                      src={`/placeholder.svg?height=100&width=100&text=${testimonial.name.charAt(0)}&bgcolor=%23e5e5e5`}
+                      src="/image/just-grey.png"
                       alt={testimonial.name}
                       fill
                       className="object-cover"
@@ -61,17 +68,21 @@ export default function GalleryPage() {
                   </div>
                   <div>
                     <h3 className="font-bold">{testimonial.name}</h3>
-                    <p className="text-xs text-muted-foreground">{testimonial.date}</p>
+                    <p className="text-xs text-muted-foreground">
+                      {testimonial.date}
+                    </p>
                   </div>
                 </div>
-                <p className="text-sm text-muted-foreground">{testimonial.text}</p>
+                <p className="text-sm text-muted-foreground">
+                  {testimonial.text}
+                </p>
               </div>
             ))}
           </div>
         </div>
       </section>
     </div>
-  )
+  );
 }
 
 const testimonials = [
@@ -105,4 +116,4 @@ const testimonials = [
     date: "8 สิงหาคม 2566",
     text: "เรียนที่นี่คุ้มค่ามาก ครูสอนดี ใจเย็น อธิบายเข้าใจง่าย รถเรียนก็สภาพดี ทำให้การเรียนขับรถเป็นเรื่องสนุกค่ะ",
   },
-]
+];

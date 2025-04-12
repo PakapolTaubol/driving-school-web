@@ -1,8 +1,16 @@
-import Link from "next/link"
-import Image from "next/image"
-import { ChevronRight, Clock, Check } from "lucide-react"
-import { Button } from "@/components/ui/button"
-import { Table, TableBody, TableCaption, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table"
+import Link from "next/link";
+import Image from "next/image";
+import { ChevronRight, Clock, Check } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import {
+  Table,
+  TableBody,
+  TableCaption,
+  TableCell,
+  TableHead,
+  TableHeader,
+  TableRow,
+} from "@/components/ui/table";
 
 export default function CoursesPage() {
   return (
@@ -12,7 +20,9 @@ export default function CoursesPage() {
         <div className="px-4 md:px-6">
           <div className="flex flex-col items-center justify-center space-y-4 text-center">
             <div className="space-y-2">
-              <h1 className="text-3xl font-bold tracking-tighter sm:text-5xl">หลักสูตรของเรา</h1>
+              <h1 className="text-3xl font-bold tracking-tighter sm:text-5xl">
+                หลักสูตรของเรา
+              </h1>
               <p className="max-w-[900px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
                 เรามีหลักสูตรที่หลากหลายเพื่อตอบสนองความต้องการของผู้เรียนทุกระดับ
               </p>
@@ -29,7 +39,9 @@ export default function CoursesPage() {
             <div className="grid gap-6 lg:grid-cols-2 lg:gap-12 items-center">
               <div className="flex flex-col justify-center space-y-4">
                 <div className="space-y-2">
-                  <h2 className="text-3xl font-bold tracking-tighter">หลักสูตรพื้นฐาน</h2>
+                  <h2 className="text-3xl font-bold tracking-tighter">
+                    หลักสูตรพื้นฐาน
+                  </h2>
                   <p className="text-gray-500 md:text-lg dark:text-gray-400">
                     สำหรับผู้เริ่มต้น เรียนรู้การขับรถเบื้องต้นและกฎจราจร
                   </p>
@@ -56,7 +68,9 @@ export default function CoursesPage() {
                     <span>การขับรถในเมือง</span>
                   </li>
                 </ul>
-                <div className="text-2xl font-bold text-blue-600">3,500 บาท</div>
+                <div className="text-2xl font-bold text-blue-600">
+                  3,500 บาท
+                </div>
                 <div>
                   <Button className="bg-blue-600 hover:bg-blue-700">
                     ลงทะเบียนเรียน
@@ -66,7 +80,7 @@ export default function CoursesPage() {
               </div>
               <div className="mx-auto lg:ml-auto">
                 <Image
-                  src="/placeholder.svg?height=400&width=600&text=&bgcolor=%23e5e5e5"
+                  src="/image/just-grey.png"
                   alt="หลักสูตรพื้นฐาน"
                   width={600}
                   height={400}
@@ -79,7 +93,9 @@ export default function CoursesPage() {
             <div className="grid gap-6 lg:grid-cols-2 lg:gap-12 items-center">
               <div className="flex flex-col justify-center space-y-4 lg:order-last">
                 <div className="space-y-2">
-                  <h2 className="text-3xl font-bold tracking-tighter">หลักสูตรมาตรฐาน</h2>
+                  <h2 className="text-3xl font-bold tracking-tighter">
+                    หลักสูตรมาตรฐาน
+                  </h2>
                   <p className="text-gray-500 md:text-lg dark:text-gray-400">
                     เรียนรู้การขับรถในสถานการณ์จริง พร้อมเตรียมสอบใบขับขี่
                   </p>
@@ -110,7 +126,9 @@ export default function CoursesPage() {
                     <span>ฝึกสอบข้อเขียนและสอบปฏิบัติ</span>
                   </li>
                 </ul>
-                <div className="text-2xl font-bold text-blue-600">5,000 บาท</div>
+                <div className="text-2xl font-bold text-blue-600">
+                  5,000 บาท
+                </div>
                 <div>
                   <Button className="bg-blue-600 hover:bg-blue-700">
                     ลงทะเบียนเรียน
@@ -120,7 +138,7 @@ export default function CoursesPage() {
               </div>
               <div className="mx-auto lg:mr-auto lg:order-first">
                 <Image
-                  src="/placeholder.svg?height=400&width=600&text=&bgcolor=%23e5e5e5"
+                  src="/image/just-grey.png"
                   alt="หลักสูตรมาตรฐาน"
                   width={600}
                   height={400}
@@ -133,8 +151,12 @@ export default function CoursesPage() {
             <div className="grid gap-6 lg:grid-cols-2 lg:gap-12 items-center">
               <div className="flex flex-col justify-center space-y-4">
                 <div className="space-y-2">
-                  <h2 className="text-3xl font-bold tracking-tighter">หลักสูตรเร่งรัด</h2>
-                  <p className="text-gray-500 md:text-lg dark:text-gray-400">เรียนเข้มข้นในเวลาสั้น สำหรับผู้ที่มีพื้นฐานมาบ้างแล้ว</p>
+                  <h2 className="text-3xl font-bold tracking-tighter">
+                    หลักสูตรเร่งรัด
+                  </h2>
+                  <p className="text-gray-500 md:text-lg dark:text-gray-400">
+                    เรียนเข้มข้นในเวลาสั้น สำหรับผู้ที่มีพื้นฐานมาบ้างแล้ว
+                  </p>
                 </div>
                 <div className="flex items-center gap-2 text-sm text-muted-foreground">
                   <Clock className="h-4 w-4" />
@@ -158,7 +180,9 @@ export default function CoursesPage() {
                     <span>ฝึกสอบข้อเขียนและสอบปฏิบัติ</span>
                   </li>
                 </ul>
-                <div className="text-2xl font-bold text-blue-600">4,000 บาท</div>
+                <div className="text-2xl font-bold text-blue-600">
+                  4,000 บาท
+                </div>
                 <div>
                   <Button className="bg-blue-600 hover:bg-blue-700">
                     ลงทะเบียนเรียน
@@ -168,7 +192,7 @@ export default function CoursesPage() {
               </div>
               <div className="mx-auto lg:ml-auto">
                 <Image
-                  src="/placeholder.svg?height=400&width=600&text=&bgcolor=%23e5e5e5"
+                  src="/image/just-grey.png"
                   alt="หลักสูตรเร่งรัด"
                   width={600}
                   height={400}
@@ -185,7 +209,9 @@ export default function CoursesPage() {
         <div className="px-4 md:px-6">
           <div className="flex flex-col items-center justify-center space-y-4 text-center">
             <div className="space-y-2">
-              <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">เปรียบเทียบหลักสูตร</h2>
+              <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
+                เปรียบเทียบหลักสูตร
+              </h2>
               <p className="max-w-[900px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
                 เลือกหลักสูตรที่เหมาะกับความต้องการของคุณ
               </p>
@@ -234,7 +260,9 @@ export default function CoursesPage() {
                   </TableCell>
                 </TableRow>
                 <TableRow>
-                  <TableCell className="font-medium">การขับรถบนทางด่วน</TableCell>
+                  <TableCell className="font-medium">
+                    การขับรถบนทางด่วน
+                  </TableCell>
                   <TableCell>-</TableCell>
                   <TableCell>
                     <Check className="h-4 w-4 text-green-500" />
@@ -244,7 +272,9 @@ export default function CoursesPage() {
                   </TableCell>
                 </TableRow>
                 <TableRow>
-                  <TableCell className="font-medium">เตรียมสอบใบขับขี่</TableCell>
+                  <TableCell className="font-medium">
+                    เตรียมสอบใบขับขี่
+                  </TableCell>
                   <TableCell>-</TableCell>
                   <TableCell>
                     <Check className="h-4 w-4 text-green-500" />
@@ -278,9 +308,12 @@ export default function CoursesPage() {
         <div className="px-4 md:px-6">
           <div className="flex flex-col items-center justify-center space-y-4 text-center">
             <div className="space-y-2">
-              <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">พร้อมเริ่มเรียนขับรถกับเราหรือยัง?</h2>
+              <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
+                พร้อมเริ่มเรียนขับรถกับเราหรือยัง?
+              </h2>
               <p className="max-w-[900px] md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                ลงทะเบียนเรียนวันนี้ และเริ่มต้นการเดินทางสู่การเป็นผู้ขับขี่ที่มั่นใจและปลอดภัย
+                ลงทะเบียนเรียนวันนี้
+                และเริ่มต้นการเดินทางสู่การเป็นผู้ขับขี่ที่มั่นใจและปลอดภัย
               </p>
             </div>
             <div className="flex flex-col gap-2 min-[400px]:flex-row">
@@ -289,7 +322,10 @@ export default function CoursesPage() {
                 <ChevronRight className="ml-2 h-4 w-4" />
               </Button>
               <Link href="/contact">
-                <Button variant="outline" className="border-white text-white hover:bg-blue-700">
+                <Button
+                  variant="outline"
+                  className="border-white text-blue-600 hover:bg-blue-700"
+                >
                   ติดต่อเรา
                 </Button>
               </Link>
@@ -298,5 +334,5 @@ export default function CoursesPage() {
         </div>
       </section>
     </div>
-  )
+  );
 }
