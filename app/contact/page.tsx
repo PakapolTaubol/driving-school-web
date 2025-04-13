@@ -154,7 +154,7 @@ export default function ContactPage() {
                 แผนที่
               </h2>
               <p className="max-w-[900px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
-                ตำแหน่งที่ตั้งของโรงเรียนสอนขับรถประชาอุทิศ
+                ตำแหน่งที่ตั้งของโรงเรียนสอนขับรถ
               </p>
             </div>
           </div>
@@ -191,7 +191,7 @@ export default function ContactPage() {
             </div>
             <div className="flex flex-col gap-2 min-[400px]:flex-row">
               <Link href="/courses">
-                <Button className="bg-white text-blue-600 hover:bg-gray-100">
+                <Button className="bg-white text-blue-600 hover:bg-gray-100 cursor-pointer">
                   ลงทะเบียนเรียน
                 </Button>
               </Link>

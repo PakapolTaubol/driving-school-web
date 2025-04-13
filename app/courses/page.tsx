@@ -11,6 +11,7 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table";
+import { CONTACT_INFO } from "@/lib/constants";
 
 export default function CoursesPage() {
   return (
@@ -72,10 +73,12 @@ export default function CoursesPage() {
                   3,500 บาท
                 </div>
                 <div>
-                  <Button className="bg-blue-600 hover:bg-blue-700">
-                    ลงทะเบียนเรียน
-                    <ChevronRight className="ml-2 h-4 w-4" />
-                  </Button>
+                  <Link href={CONTACT_INFO.social.line}>
+                    <Button className="bg-blue-600 hover:bg-blue-700 cursor-pointer">
+                      ลงทะเบียนเรียน
+                      <ChevronRight className="ml-2 h-4 w-4" />
+                    </Button>
+                  </Link>
                 </div>
               </div>
               <div className="mx-auto lg:ml-auto">
@@ -130,10 +133,12 @@ export default function CoursesPage() {
                   5,000 บาท
                 </div>
                 <div>
-                  <Button className="bg-blue-600 hover:bg-blue-700">
-                    ลงทะเบียนเรียน
-                    <ChevronRight className="ml-2 h-4 w-4" />
-                  </Button>
+                  <Link href={CONTACT_INFO.social.line}>
+                    <Button className="bg-blue-600 hover:bg-blue-700 cursor-pointer">
+                      ลงทะเบียนเรียน
+                      <ChevronRight className="ml-2 h-4 w-4" />
+                    </Button>
+                  </Link>
                 </div>
               </div>
               <div className="mx-auto lg:mr-auto lg:order-first">
@@ -184,10 +189,12 @@ export default function CoursesPage() {
                   4,000 บาท
                 </div>
                 <div>
-                  <Button className="bg-blue-600 hover:bg-blue-700">
-                    ลงทะเบียนเรียน
-                    <ChevronRight className="ml-2 h-4 w-4" />
-                  </Button>
+                  <Link href={CONTACT_INFO.social.line}>
+                    <Button className="bg-blue-600 hover:bg-blue-700 cursor-pointer">
+                      ลงทะเบียนเรียน
+                      <ChevronRight className="ml-2 h-4 w-4" />
+                    </Button>
+                  </Link>
                 </div>
               </div>
               <div className="mx-auto lg:ml-auto">
@@ -317,10 +324,12 @@ export default function CoursesPage() {
               </p>
             </div>
             <div className="flex flex-col gap-2 min-[400px]:flex-row">
-              <Button className="bg-white text-blue-600 hover:bg-gray-100">
-                ลงทะเบียนเรียน
-                <ChevronRight className="ml-2 h-4 w-4" />
-              </Button>
+              <Link href={CONTACT_INFO.social.line}>
+                <Button className="bg-white text-blue-600 hover:bg-gray-100 cursor-pointer">
+                  ลงทะเบียนเรียน
+                  <ChevronRight className="ml-2 h-4 w-4" />
+                </Button>
+              </Link>
               <Link href="/contact">
                 <Button
                   variant="outline"

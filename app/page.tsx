@@ -24,10 +24,10 @@ export default function Home() {
             <div className="flex flex-col justify-center space-y-4">
               <div className="space-y-2">
                 <h1 className="text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none">
-                  สอนขับรถ by ครูเอ้
+                  สอนขับรถ
                 </h1>
                 <p className="max-w-[600px] text-gray-500 md:text-xl dark:text-gray-400">
-                  ประชาอุทิศ สุขสวัสดิ์ บ้านคลองสวน ครุใน
+                  สอนขับรถโดยครูผู้เชี่ยวชาญ ปลอดภัย ได้ใบขับขี่แน่นอน
                 </p>
               </div>
               <div className="flex flex-col gap-2 min-[400px]:flex-row">
@@ -142,7 +142,7 @@ export default function Home() {
           </div>
           <div className="flex justify-center">
             <Link href="/courses">
-              <Button className="bg-blue-600 hover:bg-blue-700">
+              <Button className="bg-blue-600 hover:bg-blue-700 cursor-pointer">
                 ดูหลักสูตรทั้งหมด
                 <ChevronRight className="ml-2 h-4 w-4" />
               </Button>
@@ -172,7 +172,7 @@ export default function Home() {
             />
             <TestimonialCard
               name="คุณนภา"
-              text="เรียนจบแล้วสอบผ่านใบขับขี่ในครั้งแรก ขอบคุณโรงเรียนสอนขับรถประชาอุทิศมากค่ะ"
+              text="เรียนจบแล้วสอบผ่านใบขับขี่ในครั้งแรก ขอบคุณโรงเรียนสอนขับรถมากค่ะ"
               image="/image/just-grey.png"
             />
             <TestimonialCard
@@ -183,7 +183,7 @@ export default function Home() {
           </div>
           <div className="flex justify-center">
             <Link href="/gallery">
-              <Button variant="outline">
+              <Button variant="outline" className="cursor-pointer">
                 ดูรีวิวทั้งหมด
                 <ChevronRight className="ml-2 h-4 w-4" />
               </Button>

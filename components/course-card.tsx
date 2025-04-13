@@ -31,7 +31,7 @@ export default function CourseCard({ title, description, hours, price, image }: 
         </div>
         <div className="text-lg font-bold text-blue-600">{price}</div>
         <Link href="/courses">
-          <Button className="w-full bg-blue-600 hover:bg-blue-700">ลงทะเบียนเรียน</Button>
+          <Button className="w-full bg-blue-600 hover:bg-blue-700 cursor-pointer">ลงทะเบียนเรียน</Button>
         </Link>
       </div>
     </div>
