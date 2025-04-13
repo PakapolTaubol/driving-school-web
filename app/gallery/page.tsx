@@ -23,10 +23,10 @@ export default function GalleryPage() {
       <section className="w-full py-12 md:py-24 lg:py-32">
         <div className="px-4 md:px-6">
           <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3">
-            {Array.from({ length: 15 }).map((_, i) => (
+            {Array.from({ length: 9 }).map((_, i) => (
               <div key={i} className="overflow-hidden rounded-lg">
                 <Image
-                  src="/image/just-grey.png"
+                  src="/image/student/shelikesit.jpg"
                   alt={`Gallery image ${i + 1}`}
                   width={400}
                   height={300}
@@ -60,7 +60,7 @@ export default function GalleryPage() {
                 <div className="flex items-center gap-4">
                   <div className="relative h-12 w-12 overflow-hidden rounded-full">
                     <Image
-                      src="/image/just-grey.png"
+                      src="/image/student/helikesit.jpg"
                       alt={testimonial.name}
                       fill
                       className="object-cover"

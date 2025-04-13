@@ -136,7 +136,7 @@ export default function ContactPage() {
                     className="min-h-[150px]"
                   />
                 </div>
-                <Button className="bg-blue-600 hover:bg-blue-700">
+                <Button className="bg-blue-600 hover:bg-blue-700 cursor-pointer">
                   ส่งข้อความ
                 </Button>
               </form>

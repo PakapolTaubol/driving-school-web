@@ -18,15 +18,25 @@ export default function Home() {
   return (
     <div className="flex flex-col min-h-screen">
       {/* Hero Section */}
-      <section className="relative w-full py-12 md:py-24 lg:py-32 bg-gradient-to-r from-sky-100 to-blue-50">
-        <div className="px-4 md:px-6">
+      <section className="relative w-full py-12 md:py-24 lg:py-32">
+        <div
+          className="absolute inset-0"
+          style={{
+            backgroundImage: 'url("/image/car/car-wheel.jpg")',
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+            filter: "brightness(0.6)",
+          }}
+        ></div>
+        <div className="absolute inset-0 bg-black opacity-50"></div>
+        <div className="relative px-4 md:px-6">
           <div className="grid gap-6 lg:grid-cols-2 lg:gap-12 items-center">
             <div className="flex flex-col justify-center space-y-4">
-              <div className="space-y-2">
+              <div className="space-y-2 text-white">
                 <h1 className="text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none">
                   สอนขับรถ
                 </h1>
-                <p className="max-w-[600px] text-gray-500 md:text-xl dark:text-gray-400">
+                <p className="max-w-[600px] md:text-xl dark:text-gray-200">
                   สอนขับรถโดยครูผู้เชี่ยวชาญ ปลอดภัย ได้ใบขับขี่แน่นอน
                 </p>
               </div>
@@ -44,16 +54,16 @@ export default function Home() {
                 </Link>
               </div>
             </div>
-            <div className="mx-auto lg:ml-auto">
+            {/* <div className="mx-auto lg:ml-auto">
               <Image
-                src="/image/just-grey.png"
+                src="/image/student/checklist.jpg"
                 alt="Driving School"
                 width={500}
                 height={500}
                 className="rounded-xl object-cover"
                 priority
               />
-            </div>
+            </div> */}
           </div>
         </div>
       </section>
@@ -105,7 +115,7 @@ export default function Home() {
       </section>
 
       {/* Courses Section */}
-      <section className="w-full py-12 md:py-24 lg:py-32 bg-gray-50">
+      <section className="w-full py-12 md:py-24 lg:py-32 bg-gradient-to-b from-gray-50 to-gray-400">
         <div className="px-4 md:px-6">
           <div className="flex flex-col items-center justify-center space-y-4 text-center">
             <div className="space-y-2">
@@ -123,21 +133,21 @@ export default function Home() {
               description="สำหรับผู้เริ่มต้น เรียนรู้การขับรถเบื้องต้นและกฎจราจร"
               hours="10 ชั่วโมง"
               price="3,500 บาท"
-              image="/image/just-grey.png"
+              image="/image/course/checklist.jpg"
             />
             <CourseCard
               title="หลักสูตรมาตรฐาน"
               description="เรียนรู้การขับรถในสถานการณ์จริง พร้อมเตรียมสอบใบขับขี่"
               hours="15 ชั่วโมง"
               price="5,000 บาท"
-              image="/image/just-grey.png"
+              image="/image/course/drive-test.jpeg"
             />
             <CourseCard
               title="หลักสูตรเร่งรัด"
               description="เรียนเข้มข้นในเวลาสั้น สำหรับผู้ที่มีพื้นฐานมาบ้างแล้ว"
               hours="8 ชั่วโมง"
               price="4,000 บาท"
-              image="/image/just-grey.png"
+              image="/image/course/car-highway.jpg"
             />
           </div>
           <div className="flex justify-center">
@@ -168,17 +178,17 @@ export default function Home() {
             <TestimonialCard
               name="คุณสมชาย"
               text="ครูใจดีมาก สอนละเอียด ทำให้ผมที่ไม่เคยขับรถเลยสามารถขับได้อย่างมั่นใจ"
-              image="/image/just-grey.png"
+              image="/image/student/helikesit.jpg"
             />
             <TestimonialCard
               name="คุณนภา"
               text="เรียนจบแล้วสอบผ่านใบขับขี่ในครั้งแรก ขอบคุณโรงเรียนสอนขับรถมากค่ะ"
-              image="/image/just-grey.png"
+              image="/image/student/helikesit.jpg"
             />
             <TestimonialCard
               name="คุณวิชัย"
               text="ครูสอนดีมาก ใจเย็น อธิบายเข้าใจง่าย แนะนำเทคนิคดีๆ ในการขับรถหลายอย่าง"
-              image="/image/just-grey.png"
+              image="/image/student/helikesit.jpg"
             />
           </div>
           <div className="flex justify-center">
@@ -242,7 +252,7 @@ export default function Home() {
           </div>
           <div className="flex justify-center">
             <Link href="/contact">
-              <Button className="bg-blue-600 hover:bg-blue-700">
+              <Button className="bg-blue-600 hover:bg-blue-700 cursor-pointer">
                 ติดต่อเราเพิ่มเติม
                 <ChevronRight className="ml-2 h-4 w-4" />
               </Button>
